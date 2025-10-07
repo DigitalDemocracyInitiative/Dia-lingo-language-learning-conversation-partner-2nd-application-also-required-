@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "Dialingo Partner",
+  "version": "1.0.0",
+  "description": "Language conversation partner",
+  "content_scripts": [{
+    "matches": ["https://chat.openai.com/*", "https://chatgpt.com/*"],
+    "js": ["content.js"]
+  }],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": ["storage"]
+}
